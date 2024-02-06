@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container col-sm-5">
+        <h3 class="text-center m-3">Login</h3>
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="lemail" placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="Password1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto">Login</button>
+            <div class="container text-center">
+                <a href="#">Forget Password ?</a>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <div class="container text-center mt-3">
+        <!-- Button trigger modal -->
+        <label for="Password2" class="form-label">If you have not registered then click here</label>
+        <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#signupmodal">SignUp</button>
+        <!-- Modal -->
+        <div class="modal fade" id="signupmodal" tabindex="-1" aria-labelledby="signupmodalLabel" aria-hidden="true"
+            data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="signupmodalLabel">Registration Form</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Signup Form Start -->
+                        <div class="container col-sm-6">
+                            <h3 class="text-center m-3">SignUp</h3>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="Rno" class="form-label">Registration Number</label>
+                                    <input type="text" class="form-control" id="rno" placeholder="OR-05-2002">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Rno" class="form-label">Name</label>
+                                    <div class="row g-3">
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="First name">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Middle name">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="photo" class="form-label">Upload Photo</label>
+                                    <input type="file" class="form-control" id="photo">
+                                    <div class="card m-3" style="width: 10rem;">
+                                        <img src="img/user.png" height="140px" class="card-img-top" alt="image"
+                                            accept="image/*" id="profile">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phnno" class="form-label">Phone Number</label>
+                                    <input type="number" class="form-control" id="regdno" placeholder="9999999999">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Password1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="np" placeholder="New-Password">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Password2" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="cp" placeholder="Confirm Password">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto">SignUp</button>
+                            </form>
+                        </div>
+                        <!-- Signup Form End -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-success">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            function preview(event) {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const element = document.getElementById('profile');
+                    element.src = reader.result;
+                }
+                reader.onerror = function () {
+                    const element = document.getElementById('errorMsg');
+                    element.value = "Couldn't load the image.";
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            }
+
+            const input = document.getElementById('photo');
+            input.addEventListener('change', (event) => {
+                preview(event)
+            });
+        </script>
+</body>
+
+</html>
